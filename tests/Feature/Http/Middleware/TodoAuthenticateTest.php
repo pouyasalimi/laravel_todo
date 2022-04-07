@@ -11,7 +11,7 @@ use Illuminate\Foundation\Auth\User;
 /**
  * @see \Psli\Todo\Http\Middleware\TodoAuthMiddleware
  */
-class TodoAuthMiddlewareTest extends TestCase
+class TodoAuthenticateTest extends TestCase
 {
     use AdditionalAssertions;
     use RefreshDatabase;
