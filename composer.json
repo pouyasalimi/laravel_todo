@@ -1,0 +1,35 @@
+{
+    "name": "psli/todo",
+    "description": "To-Do Functionality for Laravel Projects",
+    "license": "MIT",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Psli\\Todo\\": "src/",
+            "Psli\\Todo\\Tests\\": "tests/"
+        }
+    },
+    "authors": [
+        {
+            "name": "p.salimi",
+            "email": "pouya@salimi.info"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Psli\\Todo\\TodoPackageServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "stable",
+    "require-dev": {
+        "orchestra/testbench": "^5.0",
+        "phpunit/phpunit": "^9.5",
+        "jasonmccreary/laravel-test-assertions": "^1.1"
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-f": "vendor/bin/phpunit --filter"
+    }
+}

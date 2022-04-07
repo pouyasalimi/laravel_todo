@@ -1,0 +1,37 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+class CreateLabelUserTaskTable extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::disableForeignKeyConstraints();
+
+        Schema::create('label_user_task', function (Blueprint $table) {
+            $table->primary(['user_task_id', 'label_id']);
+            $table->foreignId('user_task_id')->constrained()->onDelete('cascade');
+            $table->foreignId('label_id')->constrained()->onDelete('cascade');
+            $table->timestamps();
+        });
+
+        Schema::enableForeignKeyConstraints();
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::dropIfExists('label_user_task');
+    }
+}
