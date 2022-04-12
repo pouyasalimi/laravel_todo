@@ -4,7 +4,7 @@ This package has developed to extend laravel functionality with todo tasks
 
 ## Getting Started
 
-PHP Version: 7.8+
+PHP Version: 7.4+
 
 Laravel Version: 7.x
 
